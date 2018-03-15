@@ -1,5 +1,5 @@
 <template>
-	<ul>
+	<ul class="commonFooter">
 		<router-link tag="li" to="/home" active-class="active">首页</router-link>
 		<router-link tag="li" to="/classify" active-class="active">分类</router-link>
 		<router-link tag="li" to="/activity" active-class="active">活动页</router-link>
@@ -14,16 +14,16 @@
 <style lang="scss">
 @import '../../style/yo/usage/core/reset.scss';
 
-ul{
+.commonFooter{
 	height: 0.42rem;
 	padding: 0 .165rem;
 	background: #f1f1f1;
-	@include border( 1px 0 0 0, #000 );
+	@include border( 1px 0 0 0, #ccc );
 	@include flexbox();
-	@include justify-content( space-between );
 	@include align-items( center );
 	text-align: center;
 	li{
+		width: 20%;
 		height: 100%;
 		line-height: .42rem;
 	}

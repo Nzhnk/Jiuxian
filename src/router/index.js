@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/HomeCmpt';
-import Classify from '@/components/ClassifyCmpt';
-import Shoppingcart from '@/components/ShoppingcartCmpt';
-import Mine from '@/components/MineCmpt';
-import Activity from '@/components/ActivityCmpt';
+import Home from '@/components/HomeCmpt.vue';
+import Classify from '@/components/ClassifyCmpt.vue';
+import Shoppingcart from '@/components/ShoppingcartCmpt.vue';
+import Mine from '@/components/MineCmpt.vue';
+import Activity from '@/components/ActivityCmpt.vue';
+import FooterCmpt from '@/components/layout/FooterCmpt.vue';
 
 Vue.use(Router);
 

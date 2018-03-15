@@ -1,9 +1,6 @@
 <template lang="html">
 	<div class="container">
-		<div class="content">
-			<router-view></router-view>
-		</div>
-		<footer-cmpt></footer-cmpt>
+		<router-view></router-view>
 	</div>
 </template>
 
@@ -19,20 +16,14 @@ export default {
 
 <style lang="scss">
 @import "./style/yo/usage/core/reset.scss";
+body{
+	font-family: Helvetica, STHeiti STXihei, Microsoft JhengHei, Microsoft YaHei, Tohoma, Arial;
+	height: 100%;
+}
 .container{
 	background: #fff;
 	@include flexbox();
 	@include flex-direction( column );
 	height: 100%;
-	header{
-		height: 0.39rem;
-		line-height: 0.39rem;
-		background: #f00;
-		text-align: center;
-	}
-	.content{
-		@include flex();
-		width: 100%;
-	}
 }
 </style>
