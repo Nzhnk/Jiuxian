@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../yo/core/reset.scss";
+@import "./style/yo/core/reset.scss";
 .container{
 	background: #fff;
 	@include flexbox();
