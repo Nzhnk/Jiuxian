@@ -2,17 +2,20 @@
 	<div class="container">
 		<div class="content">
 			<router-view></router-view>
+			<product-list-cmpt></product-list-cmpt>
 		</div>
-		<footer-cmpt></footer-cmpt>
+		<!-- <footer-cmpt></footer-cmpt> -->
 	</div>
 </template>
 
 <script>
 import FooterCmpt from './components/layout/FooterCmpt.vue';
+import ProductListCmpt from './components/productList/ProductListCmpt.vue';
 
 export default {
 	components : {
-		FooterCmpt
+		FooterCmpt,
+		ProductListCmpt
 	}
 }
 </script>
@@ -32,6 +35,8 @@ export default {
 	}
 	.content{
 		@include flex();
+		@include flexbox();
+		@include flex-direction(column);
 		width: 100%;
 	}
 }
