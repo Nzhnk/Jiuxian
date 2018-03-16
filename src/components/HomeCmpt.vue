@@ -28,8 +28,7 @@ export default {
 <style lang="scss">
 @import '../style/yo/usage/core/reset.scss';
 
-.container{
-	background: #fff;
+.wrap{
 	@include flexbox();
 	@include flex-direction( column );
 	overflow: scroll;
