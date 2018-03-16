@@ -1,6 +1,10 @@
 <template>
-	<div>
+	<div class="container">
 		<header-cmpt></header-cmpt>
+		<div class="loginWrap">
+			<router-view></router-view>
+		</div>
+
 	</div>
 </template>
 
@@ -13,3 +17,14 @@ export default {
 	}
 }
 </script>
+
+<style lang="scss">
+@import '../style/yo/usage/core/reset.scss';
+.loginWrap{
+	@include flex();
+	width: 100%;
+	padding: .15rem .3rem 0;
+}
+
+
+</style>

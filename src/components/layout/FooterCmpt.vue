@@ -1,5 +1,5 @@
 <template>
-	<ul class="commonFooter">
+	<ul class="commonFooter" :isshow="true">
 		<router-link tag="li" to="/home" active-class="active">首页</router-link>
 		<router-link tag="li" to="/classify" active-class="active">分类</router-link>
 		<router-link tag="li" to="/activity" active-class="active">活动页</router-link>

@@ -2,7 +2,7 @@
 	<header>
 		<div class="headerTop">
 			<router-link to="/" class="goBack"></router-link>
-			<h2>{{title}}</h2>
+			<h2 :v-model="title">{{title}}</h2>
 			<span @click="show()" class="headerMenu"></span>
 		</div>
 		<ul class="headerNav" v-show="isShow">
@@ -24,7 +24,11 @@ export default {
 		}
 	},
 	mounted(){
-		this.title = "选 酒";
+		if( this.$route.name == 'mine' ){
+			this.title = "用 户 登 录";
+		} else if( this.$route.name == 'classify' ){
+			this.title = "选 酒";
+		};
 	},
 	methods : {
 		show(){

@@ -6,19 +6,22 @@ import Shoppingcart from '@/components/ShoppingcartCmpt.vue';
 import Mine from '@/components/MineCmpt.vue';
 import Activity from '@/components/ActivityCmpt.vue';
 import FooterCmpt from '@/components/layout/FooterCmpt.vue';
+import Login from '@/components/login/LoginCmpt.vue';
+import Register from '@/components/login/RegisterCmpt.vue';
+import Getpassword from '@/components/login/GetpasswordCmpt.vue';
 
 Vue.use(Router);
 
-export default new Router({
+export default new Router( {
 	routes: [
-		{
-			path: '/home',
-			name: 'home',
-			component: Home
-		},
 		{
 			path: '/',
 			redirect: '/home'
+		},
+		{
+			path: '/home',
+			name: 'home',
+			component: Home,
 		},
 		{
 			path: '/classify',
@@ -32,8 +35,25 @@ export default new Router({
 		},
 		{
 			path: '/mine',
-			name: 'mine',
-			component: Mine
+			redirect: '/mine/login',
+			component: Mine,
+			children: [
+				{
+					path: 'login',
+					name: 'login',
+					component: Login
+				},
+				{
+					path: 'register',
+					name: 'register',
+					component: Register
+				},
+				{
+					path: 'register',
+					name: 'register',
+					component: Getpassword
+				}
+			]
 		},
 		{
 			path: '/activity',
@@ -41,4 +61,4 @@ export default new Router({
 			component: Activity
 		}
 	]
-})
+} );
