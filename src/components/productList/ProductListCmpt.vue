@@ -3,7 +3,7 @@
 		<div class="tabs">
 			<a href="javascript:void(0);">爆款推荐</a>
 		</div>
-		<product-item-cmpt></product-item-cmpt>
+		<product-item-cmpt class="productBox"></product-item-cmpt>
 	</div>
 </template>
 
@@ -24,7 +24,7 @@
 		background: #fff;
 		@include flexbox();
 		@include flex();
-		overflow-y: scroll;
+		// overflow-y: scroll;
 		@include flex-direction(column);
 		width: 100%;
 	}
@@ -43,5 +43,9 @@
 		text-align: center;
 		color: #666;
 		font-size: 0.12rem;
+	}
+	.productBox{
+		@include flex();
+		width: 100%;
 	}
 </style>

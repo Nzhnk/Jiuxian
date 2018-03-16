@@ -19,7 +19,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="searchBox"  v-show="!isShow">
+		<div class="searchBoxInput"  v-show="!isShow">
 			<ul>
 				<li v-for="t in searchClass">
 					<a href="javascript:;">
@@ -121,7 +121,7 @@ export default {
 			}
 		}
 	}
-	.searchBox ul{
+	.searchBoxInput ul{
 		@include flexbox();
 		@include flex-wrap( wrap );
 		@include align-content( flex-start );

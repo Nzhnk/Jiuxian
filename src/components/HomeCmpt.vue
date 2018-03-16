@@ -1,13 +1,26 @@
 <template>
-	<product-list-cmpt></product-list-cmpt>
+	<div class="wrap">
+		<top-header-cmpt class="topHeader"></top-header-cmpt>
+		<div class="headerBox">
+			<banner></banner>
+			<product-list-cmpt></product-list-cmpt>
+		</div>
+		<footer-cmpt id="footerBox"></footer-cmpt>
+	</div>
 </template>
 
 <script>
+import FooterCmpt from './layout/FooterCmpt.vue';
 import ProductListCmpt from './productList/ProductListCmpt.vue';
+import TopHeaderCmpt from './layout/TopHeaderCmpt.vue';
+import Banner from './layout/Banner.vue';
 
 export default {
-	components: {
-		ProductListCmpt
+	components : {
+		FooterCmpt,
+        ProductListCmpt,
+        TopHeaderCmpt,
+        Banner
 	}
 };
 </script>
@@ -19,7 +32,18 @@ export default {
 	background: #fff;
 	@include flexbox();
 	@include flex-direction( column );
+	overflow: scroll;
 	height: 100%;
-	overflow-y: scroll;
+	.topHeader{
+		height: .39rem;
+	}
+	.headerBox{
+		@include flex();
+		width: 100%;
+		overflow-y: scroll;
+	}
+	#footerBox{
+		height: .42rem;
+	}
 }
 </style>
