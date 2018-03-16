@@ -2,8 +2,8 @@
 	<div class="wrap">
         <top-header-cmpt></top-header-cmpt>
         <banner></banner>
-		<product-list-cmpt></product-list-cmpt>
-		<footer-cmpt></footer-cmpt>
+<!-- 		<product-list-cmpt></product-list-cmpt>
+		<footer-cmpt></footer-cmpt> -->
 	</div>
 </template>
 
