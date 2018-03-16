@@ -1,5 +1,5 @@
 <template>
-	<div class="swiper-container">
+	<div class="swiper-container-box">
 		<mt-loadmore :bottom-method="loadBottom" :bottom-all-loaded="allLoaded" ref="loadmore">
 			<ul class="productItem">
 				<li v-for="(v, i) in promoList">
@@ -66,7 +66,7 @@
 <style lang="scss">
 	@import '../../../style/yo/usage/core/reset.scss';
 
-	.swiper-container {
+	.swiper-container-box {
 		width: 100%;
 	}
 

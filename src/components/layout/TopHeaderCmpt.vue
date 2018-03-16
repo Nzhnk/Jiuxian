@@ -58,7 +58,7 @@
     img {
         width: 0.57rem;
         height: 0.27rem;
-        @include border-radius(.03rem);
+        @include border-radius(5px);
     }
 }
 
@@ -81,7 +81,7 @@
         color: rgb(102, 102, 102);
         text-align: left;
         font-family: "黑体";
-        @include border-radius(0.03rem);
+        @include border-radius(5px);
         border: none;
         outline: none;
     }

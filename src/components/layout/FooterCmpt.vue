@@ -15,7 +15,7 @@
 @import '../../style/yo/usage/core/reset.scss';
 
 .commonFooter{
-	height: 0.42rem;
+	height: .42rem;
 	padding: 0 .165rem;
 	background: #f1f1f1;
 	@include border( 1px 0 0 0, #ccc );
@@ -24,7 +24,7 @@
 	text-align: center;
 	li{
 		width: 20%;
-		height: 100%;
+		height: .42rem;
 		line-height: .42rem;
 	}
 	.active{

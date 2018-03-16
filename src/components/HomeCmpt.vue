@@ -1,9 +1,11 @@
 <template>
 	<div class="wrap">
-        <top-header-cmpt></top-header-cmpt>
-        <banner></banner>
-<!-- 		<product-list-cmpt></product-list-cmpt>
-		<footer-cmpt></footer-cmpt> -->
+		<top-header-cmpt class="topHeader"></top-header-cmpt>
+		<div class="headerBox">
+			<banner></banner>
+			<product-list-cmpt></product-list-cmpt>
+		</div>
+		<footer-cmpt id="footerBox"></footer-cmpt>
 	</div>
 </template>
 
@@ -29,6 +31,18 @@ export default {
 .wrap{
 	@include flexbox();
 	@include flex-direction( column );
+	overflow: scroll;
 	height: 100%;
+	.topHeader{
+		height: .39rem;
+	}
+	.headerBox{
+		@include flex();
+		width: 100%;
+		overflow-y: scroll;
+	}
+	#footerBox{
+		height: .42rem;
+	}
 }
 </style>
