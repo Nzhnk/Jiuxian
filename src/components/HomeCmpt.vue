@@ -1,7 +1,7 @@
 <template>
 	<div class="wrap">
 		<header>首页</header>
-		<div class="content"></div>
+		<div class="content"><product-list-cmpt></product-list-cmpt></div>
 		<router-view></router-view>
 		<footer-cmpt></footer-cmpt>
 	</div>
@@ -9,11 +9,14 @@
 
 <script>
 import FooterCmpt from './layout/FooterCmpt.vue';
+import ProductListCmpt from './productList/ProductListCmpt.vue';
+
 
 
 export default {
 	components : {
-		FooterCmpt
+		FooterCmpt,
+		ProductListCmpt
 	}
 }
 </script>

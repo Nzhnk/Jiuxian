@@ -64,7 +64,7 @@
 </script>
 
 <style lang="scss">
-	@import '../../../style/yo/core/reset.scss';
+	@import '../../../style/yo/usage/core/reset.scss';
 
 	.swiper-container {
 		width: 100%;
@@ -119,7 +119,7 @@
 		position: relative;
 		padding-bottom: 100%;
 	}
-	
+
 	.loadImg {
 		display: block;
 		width: 100%;

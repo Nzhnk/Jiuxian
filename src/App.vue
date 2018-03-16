@@ -1,20 +1,20 @@
 <template lang="html">
 	<div class="container">
 		<router-view></router-view>
-		<product-list-cmpt></product-list-cmpt>
+		<!-- <product-list-cmpt></product-list-cmpt> -->
 	</div>
 </template>
 
 <script>
 import FooterCmpt from './components/layout/FooterCmpt.vue';
-import ProductListCmpt from './components/productList/ProductListCmpt.vue';
+/*import ProductListCmpt from './components/productList/ProductListCmpt.vue';
 
 export default {
 	components : {
 		FooterCmpt,
 		ProductListCmpt
 	}
-}
+}*/
 </script>
 
 <style lang="scss">

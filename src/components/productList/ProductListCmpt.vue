@@ -18,8 +18,8 @@
 </script>
 
 <style lang="scss">
-	@import '../../style/yo/core/reset.scss';
-	
+	@import '../../style/yo/usage/core/reset.scss';
+
 	.productList {
 		background: #fff;
 		@include flexbox();
