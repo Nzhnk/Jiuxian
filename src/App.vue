@@ -1,20 +1,17 @@
 <template lang="html">
 	<div class="container">
 		<router-view></router-view>
-		<!-- <product-list-cmpt></product-list-cmpt> -->
 	</div>
 </template>
 
 <script>
-import FooterCmpt from './components/layout/FooterCmpt.vue';
-/*import ProductListCmpt from './components/productList/ProductListCmpt.vue';
+// import HomeCmpt from './components/HomeCmpt.vue';
 
-export default {
-	components : {
-		FooterCmpt,
-		ProductListCmpt
-	}
-}*/
+// export default {
+// 	components : {
+// 		HomeCmpt
+// 	}
+// }
 </script>
 
 <style lang="scss">
@@ -28,5 +25,6 @@ body{
 	@include flexbox();
 	@include flex-direction( column );
 	height: 100%;
+	overflow: auto;
 }
 </style>
