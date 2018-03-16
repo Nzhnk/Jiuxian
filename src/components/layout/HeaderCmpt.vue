@@ -72,7 +72,7 @@ header{
 }
 .headerNav{
 	@include flexbox();
-	@include border( 0 0 1px 0, #ccc)
+	@include border( 0 0 1px 0, #ccc);
 	background: #efefef;
 	height: .45rem;
 	li{
