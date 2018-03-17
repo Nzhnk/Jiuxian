@@ -1,5 +1,5 @@
 <template>
-	<div class="product-container">
+	<div class="swiper-container-box">
 		<mt-loadmore :bottom-method="loadBottom" :bottom-all-loaded="allLoaded" ref="loadmore">
 			<ul class="productItem">
 				<li v-for="(v, i) in promoList">
@@ -43,6 +43,7 @@
 			}
 		},
 		methods: {
+			// 上拉加载列表
 			loadBottom() {
 				this.pageNum += 1;
 				axios({
@@ -67,6 +68,7 @@
 			}
 		},
 		mounted() {
+			// 初始化列表，渲染 pageNum=1 
 			axios({
 				method: 'GET',
 				url:'/m_v1/statics/getzx.htm',
@@ -88,7 +90,7 @@
 <style lang="scss">
 	@import '../../../style/yo/usage/core/reset.scss';
 
-	.product-container {
+	.swiper-container-box {
 		width: 100%;
 	}
 

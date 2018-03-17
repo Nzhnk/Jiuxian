@@ -4,8 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-import 'yo3/style/usage/core/reset.scss';
 import 'mint-ui/lib/style.css';
+import './assets/libs/swiper-4.1.0.css'
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
