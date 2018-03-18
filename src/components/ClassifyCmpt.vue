@@ -39,11 +39,16 @@ export default {
 	data : () => {
 		return {
 			isShow : false,
-			searchClass : ['白酒','葡萄酒','洋酒','整箱购','老酒','清仓特卖','海外直购','精美大坛','红酒整箱','值得买','销量排行','礼尚往来']
+			searchClass : ['白酒','葡萄酒','洋酒','整箱购','老酒','清仓特卖','海外直购','精美大坛','红酒整箱','值得买','销量排行','礼尚往来'],
+			title: ''
 		}
 	},
 	components : {
 		HeaderCmpt
+	},
+	beforeCreate(){
+		this.$store.state.headerTitle.title = '选酒';
+		console.log(this.$store.state.headerTitle.title)
 	},
 	methods : {
 		toggleDiv1(){

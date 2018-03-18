@@ -2,13 +2,12 @@
 	<header>
 		<div class="headerTop">
 			<router-link to="/" class="goBack"></router-link>
-			<h2 :v-model="title">{{title}}</h2>
-			<span @click="show()" class="headerMenu"></span>
+			<h2 v-model="title">{{title}}</h2>
+			<span @click="show" class="headerMenu"></span>
 		</div>
 		<ul class="headerNav" v-show="isShow">
-			<!-- <li><a href="#/"><i></i>首页</a></li> -->
 			<router-link tag="li" to="/home"><i></i><span>首页</span></router-link>
-			<router-link tag="li" to="/search"><i></i><span>搜索</span></router-link>
+			<router-link tag="li" to="/classify"><i></i><span>搜索</span></router-link>
 			<router-link tag="li" to="/shoppingcart"><i></i><span>购物车</span></router-link>
 			<router-link tag="li" to="/mine"><i></i><span>我的酒仙</span></router-link>
 		</ul>
@@ -19,16 +18,10 @@
 export default {
 	data : () => {
 		return {
+			to: '',
 			title: '',
 			isShow : false
 		}
-	},
-	mounted(){
-		if( this.$route.name == 'mine' ){
-			this.title = "用 户 登 录";
-		} else if( this.$route.name == 'classify' ){
-			this.title = "选 酒";
-		};
 	},
 	methods : {
 		show(){
@@ -66,6 +59,7 @@ header{
 		font-size: .14rem;
 		color: #fff;
 		font-weight: 500;
+		letter-spacing: .02rem;
 	}
 	.headerMenu{
 		width: .3rem;

@@ -21,7 +21,10 @@ export default {
         ProductListCmpt,
         TopHeaderCmpt,
         Banner
-	}
+	}/*,
+	beforeCreate() {
+		console.log(this.$store.state.count)
+	}*/
 };
 </script>
 
