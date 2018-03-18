@@ -6,6 +6,8 @@ import App from './App'
 import router from './router'
 
 
+import 'mint-ui/lib/style.css';
+
 import './assets/libs/swiper-4.1.0.css'
 
 Vue.config.productionTip = false

@@ -1903,9 +1903,9 @@ dom-serializer@0:
     domelementtype "~1.1.1"
     entities "~1.1.1"
 
-dom7@^2.0.2:
+dom7@^2.0.3:
   version "2.0.3"
-  resolved "https://registry.yarnpkg.com/dom7/-/dom7-2.0.3.tgz#610c530d32ebd9690d3959b19a0f379584f24fc4"
+  resolved "http://registry.npm.taobao.org/dom7/download/dom7-2.0.3.tgz#610c530d32ebd9690d3959b19a0f379584f24fc4"
   dependencies:
     ssr-window "^1.0.0"
 
@@ -5708,11 +5708,11 @@ svgo@^0.7.0:
     sax "~1.2.1"
     whet.extend "~0.9.9"
 
-swiper@^4.1.6:
-  version "4.1.6"
-  resolved "https://registry.yarnpkg.com/swiper/-/swiper-4.1.6.tgz#8e426a741f211a38a3713c8fa0d5c0152c8a6a87"
+swiper@^4.2.0:
+  version "4.2.0"
+  resolved "http://registry.npm.taobao.org/swiper/download/swiper-4.2.0.tgz#1490de68e7ba4eeecb54565de06005a7398455ee"
   dependencies:
-    dom7 "^2.0.2"
+    dom7 "^2.0.3"
     ssr-window "^1.0.0"
 
 tapable@^0.2.7:

@@ -23,6 +23,15 @@ export default {
 			isShow : false
 		}
 	},
+	mounted(){
+		/*if( this.$route.name == 'mine' ){
+			this.title = "用 户 登 录";
+		} else if( this.$route.name == 'classify' ){
+			this.title = "选 酒";
+		} else if (this.$route.name == 'activity') {
+			this.title = '3.19开仓节主会场'
+		}*/
+	},
 	methods : {
 		show(){
 			this.isShow = !this.isShow
