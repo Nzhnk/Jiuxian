@@ -4,15 +4,18 @@
 			<a href="javascript:void(0);">爆款推荐</a>
 		</div>
 		<product-item-cmpt class="productBox"></product-item-cmpt>
+		<about-us-cmpt></about-us-cmpt>
 	</div>
 </template>
 
 <script>
 	import ProductItemCmpt from './product/ProductItemCmpt.vue';
+	import AboutUsCmpt from './AboutUsCmpt.vue';
 
 	export default {
 		components: {
-			ProductItemCmpt
+			ProductItemCmpt,
+			AboutUsCmpt
 		}
 	}
 </script>

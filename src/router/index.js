@@ -50,8 +50,8 @@ export default new Router( {
 					component: Register
 				},
 				{
-					path: 'register',
-					name: 'register',
+					path: 'getpassword',
+					name: 'getpassword',
 					component: Getpassword
 				}
 			]
