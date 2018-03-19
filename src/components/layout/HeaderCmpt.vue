@@ -27,7 +27,7 @@ export default {
 		if( this.$route.name == 'mine' ){
 			this.title = "用 户 登 录";
 		} else if( this.$route.name == 'classify' ){
-			this.title = "选 酒";
+            this.title = "选 酒";
 		};
 	},
 	methods : {

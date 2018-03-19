@@ -9,6 +9,7 @@ import FooterCmpt from '@/components/layout/FooterCmpt.vue';
 import Login from '@/components/login/LoginCmpt.vue';
 import Register from '@/components/login/RegisterCmpt.vue';
 import Getpassword from '@/components/login/GetpasswordCmpt.vue';
+import ProductSearchCmpt from '@/components/productList/ProductSearchCmpt.vue'
 
 Vue.use(Router);
 
@@ -59,6 +60,11 @@ export default new Router( {
 			path: '/activity',
 			name: 'activity',
 			component: Activity
-		}
+        },
+        {
+            path: '/search',
+            name: 'search',
+            component: ProductSearchCmpt
+        }
 	]
 } );
