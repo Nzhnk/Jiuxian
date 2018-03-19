@@ -23,9 +23,13 @@
 			</div>
 			<a href="javascript:;" class="cartRemove">| 删除</a>
 		</div>
-		<p class="catInfoTip">买2件，可获得赠品</p>
-		<div class="cartGift">
+		<p class="catInfoTip" >买{{giftCount}}件，可获得赠品</p>
+		<div class="cartGift" v-if="count >= giftCount">
 			<div class="cartGiftImg"><img src="../../../static/shopcart/gift.jpg"></div>
+			<div class="cartGiftInfo">
+				<h4><em>[赠]</em>中国风青瓷花韵酒具套装</h4>
+				<p><em>￥0.00</em><span>×1</span></p>
+			</div>
 		</div>
 	</li>
 </template>
@@ -35,7 +39,8 @@ export default {
 	data: () => {
 		return {
 			isSelected: false,
-			count: '1'
+			count: '1',
+			giftCount: '6'
 		}
 	},
 	methods: {
@@ -115,7 +120,7 @@ li{
 			width: 1.9rem;
 			margin-left: .1rem;
 			h4{
-				font-size: .12rem;
+				font-size: .14rem;
 				height: .36rem;
 				line-height: .18rem;
 				font-weight: 400;
@@ -176,7 +181,44 @@ li{
 	}
 	.cartGift{
 		@include flexbox();
-
+		padding: .1rem 0 .1rem .43rem;
+		.cartGiftImg{
+			width: .8rem;
+			height: .8rem;
+			@include border( 1px, #666 );
+			img{
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.cartGiftInfo{
+			@include flex();
+			width: 100%;
+			@include flexbox();
+			@include flex-direction( column );
+			margin-left: .1rem;
+			h4{
+				width: 1.9rem;
+				font-size: .14rem;
+				line-height: .18rem;
+				font-weight: 400;
+				height: .36rem;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				em{
+					color:#f33;
+					margin-right: .05rem;
+				}
+			}
+			p{
+				@include flexbox();
+				@include justify-content( space-between );
+				padding: 0 .1rem 0 0;
+				font-size: .12rem;
+				color: #999;
+			}
+		}
 	}
 }
 

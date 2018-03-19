@@ -1,8 +1,9 @@
 <template>
 	<header>
 		<div class="headerTop">
-			<router-link to="/" class="goBack"></router-link>
-			<h2 v-model="title">{{title}}</h2>
+		<!-- 	<router-link to="'javascript:history.back();'" class="goBack"></router-link> -->
+			<a href="javascript:history.back();" class="goBack"></a>
+			<h2 v-model="title"></h2>
 			<span @click="show" class="headerMenu"></span>
 		</div>
 		<ul class="headerNav" v-show="isShow">
@@ -24,13 +25,27 @@ export default {
 		}
 	},
 	mounted(){
-		/*if( this.$route.name == 'mine' ){
-			this.title = "用 户 登 录";
+		console.log(this.$route)
+		if( this.$route.name == 'login' ){
+			this.title = "用户登录";
+		} else if( this.$route.name == 'register' ){
+			this.title = "用户注册";
 		} else if( this.$route.name == 'classify' ){
 			this.title = "选 酒";
 		} else if (this.$route.name == 'activity') {
 			this.title = '3.19开仓节主会场'
-		}*/
+		}
+	},
+	update(){
+		if( this.$route.name == 'login' ){
+			this.title = "用户登录";
+		} else if( this.$route.name == 'register' ){
+			this.title = "用户注册";
+		} else if( this.$route.name == 'classify' ){
+			this.title = "选 酒";
+		} else if (this.$route.name == 'activity') {
+			this.title = '3.19开仓节主会场'
+		}
 	},
 	methods : {
 		show(){
