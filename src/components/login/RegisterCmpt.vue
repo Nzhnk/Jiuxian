@@ -29,6 +29,7 @@
 
 <script>
 import axios from 'axios';
+import { Toast } from 'mint-ui';
 export default {
 	data: () => {
 		return {
@@ -39,6 +40,11 @@ export default {
 			regPassAgain: ''
 		}
 	},
+	beforeCreate(){
+		this.$store.commit( 'changeTitle', {
+			title: '用户注册'
+		} );
+	},
 	methods: {
 		doRegister(){
 			// 进行正则匹配
@@ -47,6 +53,10 @@ export default {
 			} else {
 				console.log(123);
 			}*/
+			this.$store.commit( 'saveInfo', {
+				regPhoneNumber: this.regPhoneNumber,
+				regPass: this.regPass
+			} )
 			axios( {
 				url : '/api/users/signup',
 				method : 'POST',
@@ -56,8 +66,16 @@ export default {
 				}
 			} )
 			.then( ( result ) => {
-				console.log( JSON.parse(result.data) );
-			})
+				Toast( {
+					message: '注册成功！',
+					position: 'middle',
+					duration: 3000
+				} );
+				let _this = this;
+				setTimeout( function(){
+					_this.$router.back(-1);
+				}, 3000 );
+			} )
 		}
 	}
 };
@@ -69,6 +87,7 @@ export default {
 .registerBox{
 	font-family: Helvetica, STHeiti STXihei, Microsoft JhengHei, Microsoft YaHei, Tohoma, Arial;
 	font-size: .14rem;
+	padding: .15rem .3rem 0;
 	.identcode, .phoneNumber, .checkcode, .passonce, .passagain{
 		width: 100%;
 		height: .42rem;

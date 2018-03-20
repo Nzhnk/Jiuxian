@@ -64,6 +64,14 @@ export default {
 			isShow: true
 		}
 	},
+	beforeCreate(){
+		this.$store.commit( 'changeTitle', {
+			title: '用户登录'
+		} );
+	},
+	mounted(){
+		console.log(this.$store.state.USER_INFO )
+	},
 	methods: {
 		changeAct1(){
 			this.isShow = true;
@@ -81,6 +89,7 @@ export default {
 .loginTypeBox{
 	font-family: Helvetica, STHeiti STXihei, Microsoft JhengHei, Microsoft YaHei, Tohoma, Arial;
 	font-size: .14rem;
+	padding: .15rem .3rem 0;
 	.loginType{
 		@include flexbox();
 		li{

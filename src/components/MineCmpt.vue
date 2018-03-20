@@ -4,7 +4,6 @@
 		<div class="loginWrap">
 			<router-view></router-view>
 		</div>
-
 	</div>
 </template>
 
@@ -16,10 +15,10 @@ export default {
 		HeaderCmpt
 	},
 	beforeCreate(){
-		this.$store.state.headerTitle.title = '用户登录';
+		// this.$store.state.headerTitle.title = '用户登录';
 	},
 	create(){
-		console.log(this.$store.state.title);
+		// console.log(this.$store.state.title);
 	}
 }
 </script>
@@ -32,7 +31,6 @@ body{
 .loginWrap{
 	@include flex();
 	width: 100%;
-	padding: .15rem .3rem 0;
 	overflow-y: scroll;
 }
 

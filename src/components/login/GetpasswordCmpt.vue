@@ -19,12 +19,23 @@
 	</div>
 </template>
 
+<script>
+export default {
+	beforeCreate(){
+		this.$store.commit( 'changeTitle', {
+			title: '找回密码'
+		} );
+	}
+}
+
+</script>
 
 <style lang="scss">
 @import '../../style/yo/usage/core/reset.scss';
 .getpasswordBox{
 	font-family: Helvetica, STHeiti STXihei, Microsoft JhengHei, Microsoft YaHei, Tohoma, Arial;
 	font-size: .14rem;
+	padding: .15rem .3rem 0;
 	.identcode, .phoneNumber, .checkcode{
 		width: 100%;
 		height: .42rem;

@@ -47,8 +47,9 @@ export default {
 		HeaderCmpt
 	},
 	beforeCreate(){
-		this.$store.state.headerTitle.title = '选酒';
-		console.log(this.$store.state.headerTitle.title)
+		this.$store.commit( 'changeTitle', {
+			title: '选酒'
+		} );
 	},
 	methods : {
 		toggleDiv1(){
