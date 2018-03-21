@@ -2,7 +2,7 @@
 	<div class="swiper-container-box">
 		<mt-loadmore :bottom-method="loadBottom" :bottom-all-loaded="allLoaded" ref="loadmore">
 			<ul class="productItem">
-				<li v-for="(v, i) in promoList">
+				<li v-for="(v, i) in promoList" :key="i">
 					<a href="javascript:void(0);">
 						<div class="tagList" v-if="v.promo">
 							<span :style="`background:${w.backColor}`" v-for="(w, j) in v.promo">{{w.name}}</span>

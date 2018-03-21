@@ -8,9 +8,9 @@
                 </div>
                 <div class="searchWrapper">
                     <i class="searchIcon"></i>
-                    <input type="text" class="search-goods">
+                    <input type="text" class="search-goods" v-model="searchKeyWord">
                 </div>
-                <input type="submit" value="搜索" class='searchBtn'>
+                <input type="submit" value="搜索" class='searchBtn' @click="searchProduct">
             </div>
         </div>
     </div>
@@ -19,7 +19,25 @@
 
 
 <script>
-    export default {}
+
+export default {
+    data: () => {
+        return {
+            searchKeyWord: '',
+        }
+    },
+
+    methods: {
+        searchProduct() {
+            this.$router.push({
+                path: 'search',
+                query: {
+                    keyword: this.searchKeyWord
+                }
+            });
+        }
+    }
+}
 </script>
 
 

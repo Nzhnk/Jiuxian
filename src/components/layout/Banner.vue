@@ -59,7 +59,7 @@ export default {
 
 
 .swiper-container {
-    height: 1.81rem;    
+    height: 1.81rem;
     position: relative;
 }
 
@@ -73,7 +73,7 @@ export default {
 .swiper-pagination {
     // position: absolute;
     text-align: right;
-    padding-right: 8px;
+    padding-right: .08rem;
 }
 
 .swiper-pagination-bullet {
