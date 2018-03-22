@@ -59,6 +59,11 @@
 				appShow: true
 			}
 		},
+		beforeCreate(){
+			this.$store.commit( 'changeTitle', {
+				title: '3.19开仓节主会场'
+			} );
+		},
 		mounted() {
 			this.countdowm(this.endTime)
 		},

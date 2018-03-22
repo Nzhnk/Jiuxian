@@ -66,6 +66,7 @@ export default {
 @import '../style/yo/usage/core/reset.scss';
 .content{
 	height: 100%;
+	background: #fff;
 	@include flexbox();
 	@include flex-direction( column );
 	.searchWrap{
