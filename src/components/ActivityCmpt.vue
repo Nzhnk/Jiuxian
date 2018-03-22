@@ -89,7 +89,7 @@
 								'min': min,
 								'sec': sec
 							}
-						} 
+						}
 						if (day <= 0 && hour > 0 ) {
 							format = {
 								'day': '00',
@@ -130,14 +130,17 @@
 	}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	@import '../style/yo/usage/core/reset.scss';
-
+	img{
+		display: block;
+	}
 	.content {
 		@include flexbox();
 		@include flex-direction(column);
 		width: 100%;
 		height: 100%;
+		position: relative;
 	}
 
 	.activityContent {
@@ -147,7 +150,7 @@
 		width: 100%;
 		overflow-y: scroll;
 	}
-	
+
 	.appdownload {
 		display: -webkit-box;
 		justify-content: space-between;
@@ -265,9 +268,11 @@
 
 	.activityFooter {
 		width: 100%;
+		background: transparent;
+		position: absolute;
+		bottom: 0;
 		img {
 			width: 100%;
-			background: transparent;
 		}
 	}
 </style>
