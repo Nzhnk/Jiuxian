@@ -9,6 +9,7 @@ import FooterCmpt from '@/components/layout/FooterCmpt.vue';
 import Login from '@/components/login/LoginCmpt.vue';
 import Register from '@/components/login/RegisterCmpt.vue';
 import Getpassword from '@/components/login/GetpasswordCmpt.vue';
+import Center from '@/components/login/CenterCmpt.vue';
 import ProductSearchCmpt from '@/components/productList/ProductSearchCmpt.vue'
 
 Vue.use(Router);
@@ -36,9 +37,14 @@ export default new Router( {
 		},
 		{
 			path: '/mine',
-			redirect: '/mine/login',
+			redirect: '/mine/center',
 			component: Mine,
 			children: [
+				{
+					path: 'center',
+					name: 'center',
+					component: Center
+				},
 				{
 					path: 'login',
 					name: 'login',

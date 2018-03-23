@@ -56,7 +56,7 @@ export default {
             this.pageNum++;
             axios({
                 method: 'GET',
-                url: '/api/m_v1/search/filterPage/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/' + this.pageNum + '/mark?v=1.0&keyword=' + encodeURIComponent(this.$route.query.keyword) + '&showtype=list',
+                url: '/api2/m_v1/search/filterPage/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/' + this.pageNum + '/mark?v=1.0&keyword=' + encodeURIComponent(this.$route.query.keyword) + '&showtype=list',
             }).then((result) => {
                 var $ = cheerio.load(result.data);
                 $('li a.prodLink').attr('href', '###');
@@ -67,11 +67,11 @@ export default {
 
                 axios({
                     method: 'GET',
-                    url: '/api/m_v1/act/selectPriceAndClubPriceByProIds.htm?1521722547699&ids=' + productIdList,
+                    url: '/api2/m_v1/act/selectPriceAndClubPriceByProIds.htm?1521722547699&ids=' + productIdList,
                 }).then((listPriceData) => {
                     axios({
                         method: 'GET',
-                        url: '/api/m_v1/act/selectProductPromosByProIds.htm?1521722547702&ids=' + productIdList
+                        url: '/api2/m_v1/act/selectProductPromosByProIds.htm?1521722547702&ids=' + productIdList
                     }).then((listPromosData) => {
         
                         const priceList = listPriceData.data.data;
@@ -113,7 +113,7 @@ export default {
     mounted() {
         axios({
             method: 'GET',
-            url: '/api/m_v1/search/filterPage/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/' + this.pageNum + '/mark?v=1.0&keyword=' + encodeURIComponent(this.$route.query.keyword) + '&showtype=list',
+            url: '/api2/m_v1/search/filterPage/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/' + this.pageNum + '/mark?v=1.0&keyword=' + encodeURIComponent(this.$route.query.keyword) + '&showtype=list',
         }).then((result) => {
             var $ = cheerio.load(result.data);
             $('li a.prodLink').attr('href', '###');
@@ -125,11 +125,11 @@ export default {
 
             axios({
                 method: 'GET',
-                url: '/api/m_v1/act/selectPriceAndClubPriceByProIds.htm?1521722547699&ids=' + productIdList,
+                url: '/api2/m_v1/act/selectPriceAndClubPriceByProIds.htm?1521722547699&ids=' + productIdList,
             }).then((listPriceData) => {
                 axios({
                     method: 'GET',
-                    url: '/api/m_v1/act/selectProductPromosByProIds.htm?1521722547702&ids=' + productIdList
+                    url: '/api2/m_v1/act/selectProductPromosByProIds.htm?1521722547702&ids=' + productIdList
                 }).then((listPromosData) => {
        
                     const priceList = listPriceData.data.data;
@@ -183,6 +183,7 @@ export default {
     font-family: "华文细黑","Microsoft YaHei","黑体",sans-serif;
     @include flexbox();
     @include flex-direction( column );
+    background: #fff;
 }
 
 header {

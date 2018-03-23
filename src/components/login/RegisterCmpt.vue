@@ -2,37 +2,92 @@
 	<div class="registerBox">
 		<div class="phoneNumber">
 			<i></i>
-			<input type="text" name="" placeholder="手机号">
+			<input type="text" name="" placeholder="手机号" id="regPhoneNumber" v-model="regPhoneNumber">
 		</div>
 		<div class="identcode">
-			<input type="text" name="" placeholder="请输入验证码">
+			<input type="text" name="" placeholder="请输入验证码" id="regIdentCode" v-model="regIdentCode">
 			<img src="../../assets/images/captchaimg.jpg" title="验证码">
 			<p>换一张</p>
 		</div>
 		<div class="checkcode">
-			<input type="text" name="" placeholder="请输入校验码">
+			<input type="text" name="" placeholder="请输入校验码" id="regCheckCode" v-model="regCheckCode">
 			<span>获取校验码</span>
 		</div>
 		<div class="passonce">
 			<i></i>
-			<input type="password" name="" placeholder="请输入密码">
+			<input type="password" name="" placeholder="请输入密码" id="regPass" v-model="regPass">
 		</div>
 		<div class="passagain">
 			<i></i>
-			<input type="password" name="" placeholder="再次输入密码">
+			<input type="password" name="" placeholder="再次输入密码" id="regPassAgain" v-model="regPassAgain">
 		</div>
-		<div class="registerBtn">
+		<div class="registerBtn" @click="doRegister">
 			<span>确认注册</span>
 		</div>
-
 	</div>
 </template>
+
+<script>
+import axios from 'axios';
+import { Toast } from 'mint-ui';
+export default {
+	data: () => {
+		return {
+			regPhoneNumber: '',
+			regIdentCode: '',
+			regCheckCode: '',
+			regPass: '',
+			regPassAgain: ''
+		}
+	},
+	beforeCreate(){
+		this.$store.commit( 'changeTitle', {
+			title: '用户注册'
+		} );
+	},
+	methods: {
+		doRegister(){
+			// 进行正则匹配
+			/*if( this.regPhoneNumber.match( /^0?(13|14|15|17|18|19)[0-9]{9}$/g ) ){
+				console.log(this.regPhoneNumber);
+			} else {
+				console.log(123);
+			}*/
+			this.$store.commit( 'saveInfo', {
+				regPhoneNumber: this.regPhoneNumber,
+				regPass: this.regPass
+			} )
+			axios( {
+				url : '/api/users/signup',
+				method : 'POST',
+				data : {
+					username: this.regPhoneNumber,
+					password: this.regPass
+				}
+			} )
+			.then( ( result ) => {
+				Toast( {
+					message: '注册成功！',
+					position: 'middle',
+					duration: 3000
+				} );
+				let _this = this;
+				setTimeout( function(){
+					_this.$router.back(-1);
+				}, 3000 );
+			} )
+		}
+	}
+};
+
+</script>
 
 <style lang="scss">
 @import '../../style/yo/usage/core/reset.scss';
 .registerBox{
 	font-family: Helvetica, STHeiti STXihei, Microsoft JhengHei, Microsoft YaHei, Tohoma, Arial;
 	font-size: .14rem;
+	padding: .15rem .3rem 0;
 	.identcode, .phoneNumber, .checkcode, .passonce, .passagain{
 		width: 100%;
 		height: .42rem;

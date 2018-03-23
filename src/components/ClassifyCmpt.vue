@@ -47,8 +47,9 @@ export default {
 		HeaderCmpt
 	},
 	beforeCreate(){
-		this.$store.state.headerTitle.title = '选酒';
-		console.log(this.$store.state.headerTitle.title)
+		this.$store.commit( 'changeTitle', {
+			title: '选酒'
+		} );
 	},
 	methods : {
 		toggleDiv1(){
@@ -65,6 +66,7 @@ export default {
 @import '../style/yo/usage/core/reset.scss';
 .content{
 	height: 100%;
+	background: #fff;
 	@include flexbox();
 	@include flex-direction( column );
 	.searchWrap{

@@ -37,6 +37,11 @@ export default {
 		NoshoppingCmpt,
 		HasgoodsCmpt
 	},
+	beforeCreate(){
+		this.$store.commit( 'changeTitle', {
+			title: '购物车'
+		} );
+	},
 	methods: {
 		allChoose(){
 			this.isAllChoose = !this.isAllChoose;
@@ -66,6 +71,9 @@ export default {
 	}
 	header .headerMenu{
 		background-image: url('../assets/images/menuBlack.png');
+	}
+	header h2{
+		color: #000;
 	}
 	.cartPay{
 		height: .5rem;

@@ -3,22 +3,19 @@ import Vuex from 'vuex';
 
 Vue.use( Vuex );
 
-// 头部标题模块
-const headerTitle = {
+export default new Vuex.Store( {
 	state: {
-		title: '',
-		path: ''
+		HEADER_TITLE:{
+			title: ''
+		},
+		USER_INFO:{},
+		SHOPP_CART:{}
 	},
 	mutations: {
-		changeTitle ( state ) {
-			state.title = '选 酒';
-		}
-	}
-};
-
-
-export default new Vuex.Store( {
-	modules: {
-		headerTitle
+		changeTitle( state, payload ){
+			state.HEADER_TITLE.title = payload.title;
+		},
+		saveInfo( state, payload ){},
+		saveCart( state, payload ){}
 	}
 } );
