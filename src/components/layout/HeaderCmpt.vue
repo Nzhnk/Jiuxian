@@ -2,7 +2,7 @@
 	<header>
 		<div class="headerTop">
 			<router-link to="/" class="goBack"></router-link>
-			<h2 v-model="title">{{title}}</h2>
+			<h2>{{title}}</h2>
 			<span @click="show" class="headerMenu"></span>
 		</div>
 		<ul class="headerNav" v-show="isShow">

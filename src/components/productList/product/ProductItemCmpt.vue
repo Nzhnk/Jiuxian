@@ -5,7 +5,7 @@
 				<li v-for="(v, i) in promoList" :key="i">
 					<a href="javascript:void(0);">
 						<div class="tagList" v-if="v.promo">
-							<span :style="`background:${w.backColor}`" v-for="(w, j) in v.promo">{{w.name}}</span>
+							<span :style="`background:${w.backColor}`" v-for="(w, j) in v.promo" :key="j">{{w.name}}</span>
 						</div>
 						<div class="ulImg">
 							<i class="loadImg"></i>

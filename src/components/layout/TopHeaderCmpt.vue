@@ -8,7 +8,7 @@
                 </div>
                 <div class="searchWrapper">
                     <i class="searchIcon"></i>
-                    <input type="text" class="search-goods" v-model="searchKeyWord">
+                    <input type="text" class="search-goods" v-model="searchKeyWord" v-on:keyup.enter="searchProduct">
                 </div>
                 <input type="submit" value="搜索" class='searchBtn' @click="searchProduct">
             </div>
